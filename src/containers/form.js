@@ -113,16 +113,8 @@ class Form extends Component {
     flightConditions.weight = parseInt(weight.target.value)
     this.setState({ flightConditions })
   }
-  // addToAcuity = (newValue) => {
-  //   console.log('actuityScore before', this.props.acuityScore);
-  //   let acuity = this.props.acuityScore + newValue
-  //   this.props.updateAcuity(acuity)
-  //   console.log('actuity and actuityScore', acuity);
-  //   console.log('acuityScore after', this.props.actuiyScore);
-  // }
 
   render() {
-    console.log('acuityScore', this.props.acuityScore);
     return (
       <div className={'fullContainer column'}>
         <div className={'baseElement'}>
