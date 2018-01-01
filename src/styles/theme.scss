@@ -1,4 +1,5 @@
-$MAIN_BLUE: #0033A1;
+$MAIN_BLUE: #0B3C81;
+$MAIN_YELLOW: #FAE600;
 $ACCENT_BLUE: #00CAF7;
 $HEADER: #153a58;
 $INACTIVE: #949494;
@@ -9,31 +10,72 @@ $BACKGROUND: #FBFBFB;
 h1 {
   padding: 0;
   margin: 0;
-  font-family: 'Helvetica', arial, sans-serif;
+  font-family: 'Anton', sans-serif;
   font-weight: 100;
 }
 h2 {
   padding: 0;
   margin: 0;
-  font-family: 'Helvetica', arial, sans-serif;
+  font-family: 'Anton', sans-serif;
   font-weight: 100;
 }
 p {
   font-size: 1em;
   padding: 0;
   margin: 0;
-  font-family: 'Helvetica', arial, sans-serif;
+  font-family: 'Anton', sans-serif;
   font-weight: 100;
 }
 .dropShadow {
   box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.5);
 }
+//home
+.logo {
+  margin: 10px;
+  width: 40vw;
+}
+.startBtn {
+  margin: 30px;
+  width: 150px;
+  height: 40px;
+  border-radius: 3px;
+  display: flex;
+  background-color: $MAIN_BLUE;
+}
+.transportBtn {
+  margin: 30px;
+  width: 150px;
+  height: 40px;
+  border-radius: 3px;
+  display: flex;
+  background-color: $MAIN_BLUE;
+}
 
-
+//form
+.formQustion {
+  margin: 10px;
+  font-family: 'Helvetica', arial, sans-serif;
+  font-weight: 100;
+}
+.acuityDropdown {
+  width: 30vw;
+  height: 60px;
+}
+.acuityScore {
+  font-size: 6em;
+}
+.transportInput {
+  width: 20vw;
+  height: 40px;
+}
+.transportScore {
+  font-size: 4em;
+}
 :export {
   MAIN_BLUE: $MAIN_BLUE;
   ACCENT_BLUE: $ACCENT_BLUE;
   HEADER: $HEADER;
+  MAIN_YELLOW: $MAIN_YELLOW;
   INACTIVE: $INACTIVE;
   ACTIVE: $ACTIVE;
   DELETE: $DELETE;

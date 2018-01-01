@@ -1,6 +1,9 @@
-export function selectNav(nav) {
+
+export const UPDATED_ACUITY = 'UPDATED_ACUITY'
+
+export function updateAcuity(score) {
   return {
-    type: 'NAV_SELECTED',
-    payload: nav
+    type: UPDATED_ACUITY,
+    payload: score
   }
 }
