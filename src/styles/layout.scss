@@ -20,3 +20,69 @@ main {
   font-family: 'Helvetica', arial, sans-serif;
   font-weight: 100;
 }
+.column {
+  flex-direction: column;
+}
+.rowEnd {
+  flex-direction: column;
+  align-items: flex-end;
+}
+.center {
+  align-items: center;
+  justify-content: center;
+}
+.fullContainer {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+.quarterBase {
+  flex: .25;
+  display: flex;
+}
+.halfBase {
+  flex: .5;
+  display: flex;
+}
+.baseElement {
+  flex: 1;
+  display: flex;
+}
+.twiceBase {
+  flex: 2;
+  display: flex;
+}
+.thriceBase {
+  flex: 3;
+  display: flex;
+}
+.fourBase {
+  flex: 4;
+  display: flex;
+}
+.fiveBase {
+  flex: 5;
+  display: flex;
+}
+
+
+//form
+.acuityElContainer {
+  width: 100vw;
+  height: 500px;
+  display: flex;
+}
+.flightConditionsContainer {
+  width: 100vw;
+  height: 520px;
+  display: flex;
+}
+
+.support {
+  width: 100vw;
+  height: 250px;
+  display: flex;
+}
