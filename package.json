@@ -2,7 +2,7 @@
   "name": "LifeSave",
   "version": "0.0.1",
   "description": "Acuity scoring and transport plan generator",
-  "main": "index.js",
+  "main": "server.js",
   "engines": {
    "node": "6.11.0",
    "npm": "3.10.10"
