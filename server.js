@@ -1,11 +1,4 @@
-var path = require('path');
-var express = require('express');
+'use strict';
 
-var app = express();
-
-app.use(express.static(path.join(__dirname, 'dist')));
-app.set('port', process.env.PORT || 8080);
-
-var server = app.listen(app.get('port'), function() {
-  console.log('listening on port ', server.address().port);
-});
+require('express')().use(require('express')
+.static(__dirname + '/build')).listen(process.env.PORT || 8080, ()=> console.log('Client Server Up on 8080'));
