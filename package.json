@@ -6,7 +6,7 @@
   "scripts": {
     "dev": "npm run build && webpack-dev-server --hot",
     "build": "webpack",
-    "start": "npm run start:prod",
+    "start": "npm run start:dev",
     "start:dev": "NODE_ENV=development; npm run build && webpack-dev-server --hot",
     "start:prod": "NODE_ENV=production http-serve ./dist --gzip -p 5000"
   },
