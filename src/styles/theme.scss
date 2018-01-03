@@ -32,7 +32,7 @@ p {
 //home
 .logo {
   margin: 10px;
-  width: 40vw;
+  width: 10em;
 }
 .startBtn {
   margin: 30px;
@@ -70,6 +70,12 @@ p {
 }
 .transportScore {
   font-size: 4em;
+}
+.btnContainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 :export {
   MAIN_BLUE: $MAIN_BLUE;

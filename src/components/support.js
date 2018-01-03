@@ -11,7 +11,7 @@ class Support extends Component {
 
   render() {
     return (
-      <div className={'support'}>
+      <div className={'support center'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
         <div className={'quarterBase'}>
           <p>Support</p>

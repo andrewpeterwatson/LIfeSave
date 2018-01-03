@@ -11,7 +11,7 @@ class ROD extends Component {
 
   render() {
     return (
-      <div className={'acuityElContainer'}>
+      <div className={'acuityElContainer center'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
         <div className={'quarterBase'}>
           <p>Risk of Deterioration</p>

@@ -143,8 +143,10 @@ class Form extends Component {
             rodChange1={this.rodChange1}
             rodChange2={this.rodChange2}
             rodChange3={this.rodChange3}/>
-            <div onClick={() => this.scoreAcuity()}>
-            <div className={'transportBtn center'}>
+
+            <div className={'btnContainer'}>
+            <div className={'transportBtn center'}
+            onClick={() => this.scoreAcuity()}>
             <p style={{color: 'white'}}>Score Acuity</p>
             </div>
             </div>
