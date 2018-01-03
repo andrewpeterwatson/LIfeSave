@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server --hot",
     "prod": "NODE_ENV=production node server.js",
-    "postinstall": "webpack -p"
+    "postinstall": "node ./node_modules/webpack/bin/webpack -p"
   },
   "repository": {
     "type": "git",
