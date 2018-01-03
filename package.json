@@ -3,6 +3,9 @@
   "version": "0.0.1",
   "description": "Acuity scoring and transport plan generator",
   "main": "index.js",
+  "engines": {
+   "node": "6.11.0"
+ },
   "scripts": {
     "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server --hot",
     "prod": "NODE_ENV=production node server.js",
