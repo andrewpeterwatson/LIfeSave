@@ -13,7 +13,7 @@ class ROD extends Component {
     return (
       <div className={'acuityElContainer center'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
-        <div className={'quarterBase'}>
+        <div className={'quarterBase formHeading'}>
           <p>Risk of Deterioration</p>
         </div>
         <div className={'twiceBase column'}>

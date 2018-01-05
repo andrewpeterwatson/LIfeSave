@@ -20,7 +20,16 @@ class Result extends Component {
     let acuity = this.props.acuityScore
     let transport = this.props.flightConditions
     console.log('ACUITY and transport', acuity, transport);
-    if (acuity <= 3) {
+    if (transport.weather === 0) {
+      return <p className={'transportScore'}>GROUND</p>
+    }
+    else if (transport.weather === 3) {
+      return <p className={'transportScore'}>RW</p>
+    }
+    else if (transport.weather === 4) {
+      return <p className={'transportScore'}>RW FW</p>
+    }
+    else if (acuity <= 3) {
       return <p className={'transportScore'}>GROUND</p>
     }
     else if (acuity >= 4 && acuity <= 10) {
@@ -40,7 +49,17 @@ class Result extends Component {
       }
       }
       else if (acuity >= 11) {
-        
+        if (transport.miles <= 150) {
+          if (transport.weather === 1) {
+            return <p className={'transportScore'}>RW FW</p>
+          }
+          else if (transport.weather === 2) {
+            return <p className={'transportScore'}>RW FW</p>
+          }
+        }
+        else if (transport.miles > 150) {
+          return <p className={'transportScore'}>FW</p>
+        }
       } else {
       return <p className={'transportScore'}>{this.state.transportScore}</p>
 

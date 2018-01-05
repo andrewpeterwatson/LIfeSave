@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 import logo from '../assets/icons/lifeteam_logo.png'
+import heliBG from '../assets/images/lt_heli.jpg'
 
 import '../styles/layout.scss'
 import Theme from '../styles/theme.scss'
@@ -13,15 +14,21 @@ class Home extends Component {
   render() {
     return (
       <div className={'fullContainer column'}>
-        <div className={'baseElement rowEnd'}>
+      <div style={{zIndex: 1}} className='bgImageContainer'>
+        <img
+        className={'homeBGImage'} src={ heliBG } alt={'LifeTeam Helicopter'} />
+        <div style={{zIndex: 2}} className='fs_dim pointillism' />
+      </div>
+        <div style={{zIndex: 2}} className={'baseElement rowEnd'}>
           <img
           style={{objectFit: 'contain', margin: 10}}
           className={'logo'} src={ logo } alt={'LifeTeam'} />
         </div>
         <div
-        style={{color: Theme.MAIN_BLUE}}
+        style={{color: Theme.MAIN_BLUE, zIndex: 2}}
         className={'fiveBase center column'}>
-          <h1>LifeSave</h1>
+          <h1 className='title'>LifeSave</h1>
+          <p className='subTitle'>Interfacility Transport Score</p>
           <Link
           to={'/form'}>
             <div className={'startBtn center'}>

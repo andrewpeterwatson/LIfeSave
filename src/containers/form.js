@@ -114,10 +114,22 @@ class Form extends Component {
     flightConditions.weight = parseInt(weight.target.value)
     this.setState({ flightConditions })
   }
+  renderSpecialization = () => {
+    let acuity = this.props.acuityScore
+    if (acuity <= 3) {
+        return <p className={'transportScore'}>BLS</p>
+      }
+    else if (acuity >= 4 && acuity <= 10) {
+      return <p className={'transportScore'}>ALS</p>
+      }
+    else if (acuity >= 11) {
+      return <p className={'transportScore'}>Critical Care</p>
+      }
+  }
 
   render() {
     return (
-      <div className={'fullContainer column'}>
+      <div className={'fullContainer center column'}>
         <div className={'baseElement'}>
           <div className={'baseElement center'}>
             {this.state.showAcuity ? <p onClick={() => this.toggleShowAcuityScore()}>back</p> : null}
@@ -153,8 +165,8 @@ class Form extends Component {
             </div>
           </div> : <div>
             <div className={'flightConditionsContainer column center'}>
-            <div>
-            <h2 className={'acuityScore animated fadeIn'}>{this.state.acuityScore}</h2>
+            <div style={{textAlign: 'center'}}>
+              {this.renderSpecialization()}
             <p className='animated fadeInUp'>Acuity Score</p>
             </div>
             <div>

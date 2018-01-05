@@ -14,7 +14,7 @@ class Support extends Component {
       <div className={'support center'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
         <div className={'quarterBase'}>
-          <p>Support</p>
+          <p className='formHeading'>Support</p>
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement'}>

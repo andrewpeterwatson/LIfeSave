@@ -13,8 +13,8 @@ class FlightConditions extends Component {
     return (
       <div className={'baseElement'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
-        <div className={'quarterBase'}>
-          <p className='animated fadeInUp'>Flight Conditions</p>
+        <div className={'baseElement'}>
+          <p className='formHeading animated fadeInUp'>Flight Conditions</p>
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement'}>
@@ -32,7 +32,8 @@ class FlightConditions extends Component {
           <div className={'baseElement column center'}>
               <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu1" onChange={this.props.weatherChange}>
                 <option>Answer</option>
-                <option value={3}>Not Drivable</option>
+                <option value={3}>Not Drivable(IFR)</option>
+                <option value={4}>Not Drivable(VFR)</option>
                 <option value={0}>0/0</option>
                 <option value={1}>VFR</option>
                 <option value={2}>IFR</option>
