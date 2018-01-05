@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-// import ServerSelected from './reducer_server'
 import AcuityScore from './reducer_acuityScore'
+import FlightConditions from './reducer_flight_conditions'
 
 const rootReducer = combineReducers({
-  // serverSelected: ServerSelected,
+  flightConditions: FlightConditions,
   acuityScore: AcuityScore
 });
 

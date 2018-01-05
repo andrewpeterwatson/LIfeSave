@@ -11,6 +11,40 @@ import Theme from '../styles/theme.scss'
 class Result extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      transportScore: 'DRIVE'
+    }
+  }
+
+  scoreTransport = () => {
+    let acuity = this.props.acuityScore
+    let transport = this.props.flightConditions
+    console.log('ACUITY and transport', acuity, transport);
+    if (acuity <= 3) {
+      return <p className={'transportScore'}>GROUND</p>
+    }
+    else if (acuity >= 4 && acuity <= 10) {
+      if (transport.miles <= 50) {
+        return <p className={'transportScore'}>GROUND</p>
+        }
+      else if (transport.miles > 50 && transport.miles <= 150) {
+        if (transport.weather === 1) {
+          return <p className={'transportScore'}>RW FW</p>
+        }
+        else if (transport.weather === 2) {
+          return <p className={'transportScore'}>RW</p>
+        }
+      }
+      else if (transport.miles > 150) {
+        return <p className={'transportScore'}>RW</p>
+      }
+      }
+      else if (acuity >= 11) {
+        
+      } else {
+      return <p className={'transportScore'}>{this.state.transportScore}</p>
+
+    }
   }
 
   renderSpecialization = () => {
@@ -26,6 +60,7 @@ class Result extends Component {
       }
   }
   render() {
+
     return (
       <div className={'fullContainer column'}>
         <div className={'baseElement row'}>
@@ -50,6 +85,7 @@ class Result extends Component {
         <div className={'fiveBase column'}>
           <div className={'baseElement column center'}>
             <h3 className={'transportName'}>Mode of Transport</h3>
+             {this.scoreTransport()}
           </div>
           <div className={'baseElement column center'}>
           <h3 className={'transportName'}>Level of Crew Specialization</h3>
@@ -78,6 +114,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   return {
     acuityScore: state.acuityScore,
+    flightConditions: state.flightConditions
   };
 }
 

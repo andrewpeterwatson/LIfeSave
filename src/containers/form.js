@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { updateAcuity } from '../actions/index'
+import { updateFC } from '../actions/action_update_flight_conditions'
 import { bindActionCreators } from 'redux'
 
 import logo from '../assets/icons/lifeteam_logo.png'
@@ -153,8 +154,8 @@ class Form extends Component {
           </div> : <div>
             <div className={'flightConditionsContainer column center'}>
             <div>
-            <h2 className={'acuityScore'}>{this.state.acuityScore}</h2>
-            <p>Acuity Score</p>
+            <h2 className={'acuityScore animated fadeIn'}>{this.state.acuityScore}</h2>
+            <p className='animated fadeInUp'>Acuity Score</p>
             </div>
             <div>
             <FlightConditions
@@ -163,7 +164,8 @@ class Form extends Component {
             weightChange={this.weightChange} />
             </div>
             <Link
-            to={'/result'}>
+            to={'/result'}
+            onClick={() => this.props.updateFC(this.state.flightConditions)}>
             <div className={'transportBtn center'}>
             <p style={{color: 'white'}}>Transport Plan</p>
             </div>
@@ -179,6 +181,7 @@ class Form extends Component {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
+    updateFC: updateFC,
     updateAcuity: updateAcuity
   }, dispatch)
 }
