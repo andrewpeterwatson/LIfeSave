@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-import logo from '../assets/icons/lifeteam_logo.png'
+import logo from '../assets/icons/lifeteam_logo-trans.png'
 import heliBG from '../assets/images/lt_heli.jpg'
 
 import '../styles/layout.scss'
@@ -17,11 +17,11 @@ class Home extends Component {
       <div style={{zIndex: 1}} className='bgImageContainer'>
         <img
         className={'homeBGImage'} src={ heliBG } alt={'LifeTeam Helicopter'} />
-        <div style={{zIndex: 2}} className='fs_dim pointillism' />
+        <div style={{zIndex: 2}} className='fs_dim' />
       </div>
-        <div style={{zIndex: 2}} className={'baseElement rowEnd'}>
+        <div style={{zIndex: 2}} className={'baseElement center'}>
           <img
-          style={{objectFit: 'contain', margin: 10}}
+          style={{objectFit: 'contain', margin: 20}}
           className={'logo'} src={ logo } alt={'LifeTeam'} />
         </div>
         <div

@@ -130,18 +130,28 @@ class Form extends Component {
   render() {
     return (
       <div className={'fullContainer center column'}>
-        <div className={'baseElement'}>
-          <div className={'baseElement center'}>
-            {this.state.showAcuity ? <p onClick={() => this.toggleShowAcuityScore()}>back</p> : null}
+          <div className={'headerContainer row'}>
+          <div style={{alignItems: 'center', margin: 20}} className='baseElement row'>
+          { !this.state.showAcuity ? <Link
+            style={{textDecoration: 'none'}}
+            to={'/'}>
+              <div className='backBtn'>
+                <p style={{textDecoration: 'none', color: Theme.MAIN_BLUE}}>back</p>
+              </div>
+            </Link>
+            : <div onClick={() => this.setState({ showAcuity: false })} className='backBtn'>
+                <p style={{textDecoration: 'none', color: Theme.MAIN_BLUE}}>back</p>
+              </div>
+            }
           </div>
-          <div className={'baseElement'}>
+          <div style={{alignItems: 'center', justifyContent: 'flex-end', margin: 20}} className='baseElement'>
             <Link
             to={'/'}>
             <img
             style={{objectFit: 'contain'}}
-            className={'logo'} src={ logo } alt={'LifeTeam'} />
+            className={'logoSm'} src={ logo } alt={'LifeTeam'} />
             </Link>
-          </div>
+            </div>
         </div>
         <div className={'fiveBase column'}>
         { !this.state.showAcuity ? <div>

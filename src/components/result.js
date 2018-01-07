@@ -83,19 +83,22 @@ class Result extends Component {
     return (
       <div className={'fullContainer column'}>
         <div className={'baseElement row'}>
-          <div className={'baseElement'}>
-            <Link
-            to={'/form'}>
-              <p style={{margin: 10}}>back</p>
-            </Link>
-          </div>
-          <div className={'baseElement'}>
-            <Link
-            to={'/'}>
-            <img
-            style={{objectFit: 'contain'}}
-            className={'logo'} src={ logo } alt={'LifeTeam'} />
-            </Link>
+        <div style={{alignItems: 'center', margin: 20}} className='baseElement row'>
+        <Link
+          style={{textDecoration: 'none'}}
+          to={'/form'}>
+            <div className='backBtn'>
+              <p style={{textDecoration: 'none', color: Theme.MAIN_BLUE}}>back</p>
+            </div>
+          </Link>
+        </div>
+        <div style={{alignItems: 'center', justifyContent: 'flex-end', margin: 20}} className='baseElement'>
+          <Link
+          to={'/'}>
+          <img
+          style={{objectFit: 'contain'}}
+          className={'logoSm'} src={ logo } alt={'LifeTeam'} />
+          </Link>
           </div>
         </div>
         <div className={'halfBase center'}>
@@ -111,7 +114,7 @@ class Result extends Component {
             {this.renderSpecialization()}
           </div>
         </div>
-        <div className={'baseElement'}>
+        <div className={'baseElement center'}>
           <Link
           to={'/'}>
             <div className={'transportBtn center'}>
