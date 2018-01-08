@@ -176,6 +176,7 @@ class Form extends Component {
           </div> : <div>
             <div className={'flightConditionsContainer column center'}>
             <div style={{textAlign: 'center'}}>
+            <h2 className={'transportScore'}>{this.state.acuityScore}</h2>
               {this.renderSpecialization()}
             <p className='animated fadeInUp'>Acuity Score</p>
             </div>

@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-import logo from '../assets/icons/lifeteam_logo-trans.png'
+import logo from '../assets/icons/logo_trans.png'
 import heliBG from '../assets/images/lt_heli.jpg'
 
 import '../styles/layout.scss'
