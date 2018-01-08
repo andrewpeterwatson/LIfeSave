@@ -13,26 +13,27 @@ class FlightConditions extends Component {
     return (
       <div className={'baseElement'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
-        <div className={'quarterBase'}>
-          <p>Flight Conditions</p>
+        <div className={'baseElement'}>
+          <p className='formHeading animated fadeInUp'>Flight Conditions</p>
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement'}>
-            <p className={'formQustion'}>Distance</p>
+            <p className={'formQustion animated fadeInUp'}>Distance</p>
           </div>
           <div className={'baseElement row center'}>
-            <input onChange={this.props.distChange} className={'transportInput'} type='number' />
+            <input onChange={this.props.distChange} className={'transportInput animated fadeInUp'} type='number' />
             <p>mi</p>
           </div>
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement'}>
-            <p className={'formQustion'}>Weather along path</p>
+            <p className={'formQustion animated fadeInUp'}>Weather along path</p>
           </div>
           <div className={'baseElement column center'}>
-              <select className={'acuityDropdown'} name="acuityMenu1" onChange={this.props.weatherChange}>
+              <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu1" onChange={this.props.weatherChange}>
                 <option>Answer</option>
-                <option value={3}>Not Drivable</option>
+                <option value={3}>Not Drivable(IFR)</option>
+                <option value={4}>Not Drivable(VFR)</option>
                 <option value={0}>0/0</option>
                 <option value={1}>VFR</option>
                 <option value={2}>IFR</option>
@@ -41,10 +42,10 @@ class FlightConditions extends Component {
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement'}>
-            <p className={'formQustion'}>Patient Weight</p>
+            <p className={'formQustion animated fadeInUp'}>Patient Weight</p>
           </div>
           <div className={'baseElement row center'}>
-          <input onChange={this.props.weightChange} className={'transportInput'} type='number' />
+          <input onChange={this.props.weightChange} className={'transportInput animated fadeInUp'} type='number' />
           <p>lbs</p>
           </div>
         </div>

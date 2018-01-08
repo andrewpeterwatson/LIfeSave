@@ -15,14 +15,14 @@ class LOC extends Component {
       <div className={'acuityElContainer column'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
         <div className={'baseElement'}>
-          <p>Level of Care</p>
+          <p className='formHeading animated fadeInUp'>Level of Care</p>
         </div>
         <div className={'twiceBase column'}>
           <div className={'twiceBase'}>
-            <p className={'formQustion'}>Do they have a time critical illness? e.g., stroke, acute MI, trauma, sepsis</p>
+            <p className={'formQustion animated fadeInUp'}>Do they have a time critical illness? e.g., stroke, acute MI, trauma, sepsis</p>
           </div>
           <div className={'baseElement column center'}>
-              <select className={'acuityDropdown'} name="acuityMenu1" onChange={this.props.locChange1}>
+              <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu1" onChange={this.props.locChange1}>
                 <option>Answer</option>
                 <option value={4}>YES</option>
                 <option value={0}>NO</option>
@@ -31,10 +31,10 @@ class LOC extends Component {
         </div>
         <div className={'twiceBase column'}>
           <div className={'twiceBase'}>
-            <p className={'formQustion'}>What is the care they will need?</p>
+            <p className={'formQustion animated fadeInUp'}>What is the care they will need?</p>
           </div>
           <div className={'baseElement column center'}>
-              <select className={'acuityDropdown'} name="acuityMenu2" onChange={this.props.locChange2}>
+              <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu2" onChange={this.props.locChange2}>
                 <option>Answer</option>
                 <option value={0}>Floor Bed</option>
                 <option value={4}>Telemetry</option>
@@ -44,10 +44,10 @@ class LOC extends Component {
         </div>
         <div className={'twiceBase column'}>
           <div className={'twiceBase'}>
-            <p className={'formQustion'}>In the prior 2 hours, have they had symptoms requiring intervention such as:  hemodynamic instability, arrhythmia, neurologic change, intractable pain, other?</p>
+            <p className={'formQustion animated fadeInUp'}>In the prior 2 hours, have they had symptoms requiring intervention such as:  hemodynamic instability, arrhythmia, neurologic change, intractable pain, other?</p>
           </div>
           <div className={'baseElement column center'}>
-              <select className={'acuityDropdown'} name="acuityMenu2" onChange={this.props.locChange3}>
+              <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu2" onChange={this.props.locChange3}>
                 <option>Answer</option>
                 <option value={0}>YES</option>
                 <option value={4}>NO</option>

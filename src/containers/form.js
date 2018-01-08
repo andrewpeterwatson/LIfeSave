@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { updateAcuity } from '../actions/index'
+import { updateFC } from '../actions/action_update_flight_conditions'
 import { bindActionCreators } from 'redux'
 
 import logo from '../assets/icons/lifeteam_logo.png'
@@ -113,30 +114,44 @@ class Form extends Component {
     flightConditions.weight = parseInt(weight.target.value)
     this.setState({ flightConditions })
   }
-  // addToAcuity = (newValue) => {
-  //   console.log('actuityScore before', this.props.acuityScore);
-  //   let acuity = this.props.acuityScore + newValue
-  //   this.props.updateAcuity(acuity)
-  //   console.log('actuity and actuityScore', acuity);
-  //   console.log('acuityScore after', this.props.actuiyScore);
-  // }
+  renderSpecialization = () => {
+    let acuity = this.props.acuityScore
+    if (acuity <= 3) {
+        return <p className={'transportScore'}>BLS</p>
+      }
+    else if (acuity >= 4 && acuity <= 10) {
+      return <p className={'transportScore'}>ALS</p>
+      }
+    else if (acuity >= 11) {
+      return <p className={'transportScore'}>Critical Care</p>
+      }
+  }
 
   render() {
-    console.log('acuityScore', this.props.acuityScore);
     return (
-      <div className={'fullContainer column'}>
-        <div className={'baseElement'}>
-          <div className={'baseElement center'}>
-            {this.state.showAcuity ? <p onClick={() => this.toggleShowAcuityScore()}>back</p> : null}
+      <div className={'fullContainer center column'}>
+          <div className={'headerContainer row'}>
+          <div style={{alignItems: 'center', margin: 20}} className='baseElement row'>
+          { !this.state.showAcuity ? <Link
+            style={{textDecoration: 'none'}}
+            to={'/'}>
+              <div className='backBtn'>
+                <p style={{textDecoration: 'none', color: Theme.MAIN_BLUE}}>back</p>
+              </div>
+            </Link>
+            : <div onClick={() => this.setState({ showAcuity: false })} className='backBtn'>
+                <p style={{textDecoration: 'none', color: Theme.MAIN_BLUE}}>back</p>
+              </div>
+            }
           </div>
-          <div className={'baseElement'}>
+          <div style={{alignItems: 'center', justifyContent: 'flex-end', margin: 20}} className='baseElement'>
             <Link
             to={'/'}>
             <img
             style={{objectFit: 'contain'}}
-            className={'logo'} src={ logo } alt={'LifeTeam'} />
+            className={'logoSm'} src={ logo } alt={'LifeTeam'} />
             </Link>
-          </div>
+            </div>
         </div>
         <div className={'fiveBase column'}>
         { !this.state.showAcuity ? <div>
@@ -151,16 +166,19 @@ class Form extends Component {
             rodChange1={this.rodChange1}
             rodChange2={this.rodChange2}
             rodChange3={this.rodChange3}/>
-            <div onClick={() => this.scoreAcuity()}>
-            <div className={'transportBtn center'}>
+
+            <div className={'btnContainer'}>
+            <div className={'transportBtn center'}
+            onClick={() => this.scoreAcuity()}>
             <p style={{color: 'white'}}>Score Acuity</p>
             </div>
             </div>
           </div> : <div>
             <div className={'flightConditionsContainer column center'}>
-            <div>
-            <h2 className={'acuityScore'}>{this.state.acuityScore}</h2>
-            <p>Acuity Score</p>
+            <div style={{textAlign: 'center'}}>
+            <h2 className={'transportScore'}>{this.state.acuityScore}</h2>
+              {this.renderSpecialization()}
+            <p className='animated fadeInUp'>Acuity Score</p>
             </div>
             <div>
             <FlightConditions
@@ -169,7 +187,8 @@ class Form extends Component {
             weightChange={this.weightChange} />
             </div>
             <Link
-            to={'/result'}>
+            to={'/result'}
+            onClick={() => this.props.updateFC(this.state.flightConditions)}>
             <div className={'transportBtn center'}>
             <p style={{color: 'white'}}>Transport Plan</p>
             </div>
@@ -185,6 +204,7 @@ class Form extends Component {
 
 function mapDispatchToProps(dispatch) {
   return bindActionCreators({
+    updateFC: updateFC,
     updateAcuity: updateAcuity
   }, dispatch)
 }

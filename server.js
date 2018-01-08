@@ -1,4 +1,8 @@
-'use strict';
+var express = require('express');
+var app = express();
+var port = process.env.PORT || 8080
 
-require('express')().use(require('express')
-.static(__dirname + '/build')).listen(process.env.PORT || 8080, ()=> console.log('Client Server Up on 8080'));
+app.use(express.static(__dirname + '/dist'));
+console.log('Express started on port ', port)
+
+app.listen(port);

@@ -1,11 +1,48 @@
 $MAIN_BLUE: #0B3C81;
+$TITLE: #0B3C81;
+$SUBTITLE: #7da1d5;
 $MAIN_YELLOW: #FAE600;
 $ACCENT_BLUE: #00CAF7;
 $HEADER: #153a58;
 $INACTIVE: #949494;
+$ACTION: #cb493c;
 $ACTIVE: #77B800;
 $DELETE: #C00000;
 $BACKGROUND: #FBFBFB;
+
+$pointSize: 4px;
+$bgColor: rgba(40, 43, 52, 0.25);
+
+.pointillism {
+   img {
+       @extend %spread;
+       object-fit: cover;
+   }
+   &:after {
+       @extend %spread;
+       content: '';
+       background-size: $pointSize $pointSize;
+       background-position: center center;
+       background-repeat: repeat;
+       background-image: radial-gradient(
+            rgba($bgColor, 0),
+            rgba($bgColor, 1) 80%,
+            rgba($bgColor, 1)
+       );
+   }
+}
+
+%spread {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
 
 h1 {
   padding: 0;
@@ -27,12 +64,66 @@ p {
   font-weight: 100;
 }
 .dropShadow {
-  box-shadow: 0px 0px 11px 1px rgba(0,0,0,0.5);
+  box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.5);
+}
+.title {
+  font-size: 4em;
+  color: white;
+}
+.subTitle {
+  font-size: 1.1em;
+  line-height: .2em;
+  font-weight: 100;
+  color: white
+}
+.backBtn {
+  width: 60px;
+  height: 30px;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px $MAIN_BLUE solid;
+}
+.formHeading {
+  font-size: 2em;
+  font-weight: bold;
 }
 //home
 .logo {
   margin: 10px;
-  width: 40vw;
+  width: 10em;
+}
+.logoSm {
+  margin: 10px;
+  width: 5em;
+}
+.fs_dim {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0,0,0,0.25);
+}
+.bgImageContainer {
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  overflow: hidden;
+}
+.homeBGImage {
+  margin: 0;
+  padding: 0;
+  min-width: 100vw;
+  min-height: 100vh;
+  background-size: contain;
 }
 .startBtn {
   margin: 30px;
@@ -70,6 +161,12 @@ p {
 }
 .transportScore {
   font-size: 4em;
+}
+.btnContainer {
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 :export {
   MAIN_BLUE: $MAIN_BLUE;

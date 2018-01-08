@@ -11,6 +11,59 @@ import Theme from '../styles/theme.scss'
 class Result extends Component {
   constructor(props) {
     super(props)
+    this.state = {
+      transportScore: 'DRIVE'
+    }
+  }
+
+  scoreTransport = () => {
+    let acuity = this.props.acuityScore
+    let transport = this.props.flightConditions
+    console.log('ACUITY and transport', acuity, transport);
+    if (transport.weather === 0) {
+      return <p className={'transportScore'}>GROUND</p>
+    }
+    else if (transport.weather === 3) {
+      return <p className={'transportScore'}>RW</p>
+    }
+    else if (transport.weather === 4) {
+      return <p className={'transportScore'}>RW FW</p>
+    }
+    else if (acuity <= 3) {
+      return <p className={'transportScore'}>GROUND</p>
+    }
+    else if (acuity >= 4 && acuity <= 10) {
+      if (transport.miles <= 50) {
+        return <p className={'transportScore'}>GROUND</p>
+        }
+      else if (transport.miles > 50 && transport.miles <= 150) {
+        if (transport.weather === 1) {
+          return <p className={'transportScore'}>RW FW</p>
+        }
+        else if (transport.weather === 2) {
+          return <p className={'transportScore'}>RW</p>
+        }
+      }
+      else if (transport.miles > 150) {
+        return <p className={'transportScore'}>RW</p>
+      }
+      }
+      else if (acuity >= 11) {
+        if (transport.miles <= 150) {
+          if (transport.weather === 1) {
+            return <p className={'transportScore'}>RW FW</p>
+          }
+          else if (transport.weather === 2) {
+            return <p className={'transportScore'}>RW FW</p>
+          }
+        }
+        else if (transport.miles > 150) {
+          return <p className={'transportScore'}>FW</p>
+        }
+      } else {
+      return <p className={'transportScore'}>{this.state.transportScore}</p>
+
+    }
   }
 
   renderSpecialization = () => {
@@ -26,22 +79,26 @@ class Result extends Component {
       }
   }
   render() {
+
     return (
       <div className={'fullContainer column'}>
         <div className={'baseElement row'}>
-          <div className={'baseElement'}>
-            <Link
-            to={'/form'}>
-              <p style={{margin: 10}}>back</p>
-            </Link>
-          </div>
-          <div className={'baseElement'}>
-            <Link
-            to={'/'}>
-            <img
-            style={{objectFit: 'contain'}}
-            className={'logo'} src={ logo } alt={'LifeTeam'} />
-            </Link>
+        <div style={{alignItems: 'center', margin: 20}} className='baseElement row'>
+        <Link
+          style={{textDecoration: 'none'}}
+          to={'/form'}>
+            <div className='backBtn'>
+              <p style={{textDecoration: 'none', color: Theme.MAIN_BLUE}}>back</p>
+            </div>
+          </Link>
+        </div>
+        <div style={{alignItems: 'center', justifyContent: 'flex-end', margin: 20}} className='baseElement'>
+          <Link
+          to={'/'}>
+          <img
+          style={{objectFit: 'contain'}}
+          className={'logoSm'} src={ logo } alt={'LifeTeam'} />
+          </Link>
           </div>
         </div>
         <div className={'halfBase center'}>
@@ -50,13 +107,14 @@ class Result extends Component {
         <div className={'fiveBase column'}>
           <div className={'baseElement column center'}>
             <h3 className={'transportName'}>Mode of Transport</h3>
+             {this.scoreTransport()}
           </div>
           <div className={'baseElement column center'}>
           <h3 className={'transportName'}>Level of Crew Specialization</h3>
             {this.renderSpecialization()}
           </div>
         </div>
-        <div className={'baseElement'}>
+        <div className={'baseElement center'}>
           <Link
           to={'/'}>
             <div className={'transportBtn center'}>
@@ -78,6 +136,7 @@ function mapDispatchToProps(dispatch) {
 function mapStateToProps(state) {
   return {
     acuityScore: state.acuityScore,
+    flightConditions: state.flightConditions
   };
 }
 

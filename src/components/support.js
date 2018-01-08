@@ -11,17 +11,17 @@ class Support extends Component {
 
   render() {
     return (
-      <div className={'support'}>
+      <div className={'support center'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
         <div className={'quarterBase'}>
-          <p>Support</p>
+          <p className='formHeading animated fadeInUp'>Support</p>
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement'}>
-            <p className={'formQustion'}>Are there vasoactive drips needed to control blood pressure or heart rate? <br /> Or; <br /> Is there need for respiratory or ventilation support, either invasive or noninvasive?</p>
+            <p className={'formQustion animated fadeInUp'}>Are there vasoactive drips needed to control blood pressure or heart rate? <br /> Or; <br /> Is there need for respiratory or ventilation support, either invasive or noninvasive?</p>
           </div>
           <div className={'baseElement column center'}>
-              <select className={'acuityDropdown'} name="acuityMenu1" onChange={this.props.supportChange}>
+              <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu1" onChange={this.props.supportChange}>
                 <option>Answer</option>
                 <option value={5}>YES</option>
                 <option value={0}>NO</option>
