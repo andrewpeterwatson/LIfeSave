@@ -49,8 +49,8 @@ class LOC extends Component {
           <div className={'baseElement column center'}>
               <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu2" onChange={this.props.locChange3}>
                 <option>Answer</option>
-                <option value={0}>YES</option>
-                <option value={4}>NO</option>
+                <option value={4}>YES</option>
+                <option value={0}>NO</option>
               </select>
           </div>
         </div>

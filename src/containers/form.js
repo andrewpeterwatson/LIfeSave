@@ -117,13 +117,13 @@ class Form extends Component {
   renderSpecialization = () => {
     let acuity = this.props.acuityScore
     if (acuity <= 3) {
-        return <p className={'transportScore'}>BLS</p>
+        return <p>BLS</p>
       }
     else if (acuity >= 4 && acuity <= 10) {
-      return <p className={'transportScore'}>ALS</p>
+      return <p>ALS</p>
       }
     else if (acuity >= 11) {
-      return <p className={'transportScore'}>Critical Care</p>
+      return <p>Critical Care</p>
       }
   }
 

@@ -23,10 +23,10 @@ class Result extends Component {
     if (transport.weather === 0) {
       return <p className={'transportScore'}>GROUND</p>
     }
-    else if (transport.weather === 3) {
+    else if (transport.weather === 3 && acuity < 11) {
       return <p className={'transportScore'}>RW</p>
     }
-    else if (transport.weather === 4) {
+    else if (transport.weather === 4 && acuity < 11) {
       return <p className={'transportScore'}>RW FW</p>
     }
     else if (acuity <= 3) {
@@ -45,16 +45,16 @@ class Result extends Component {
         }
       }
       else if (transport.miles > 150) {
-        return <p className={'transportScore'}>RW</p>
+        return <p className={'transportScore'}>FW</p>
       }
       }
       else if (acuity >= 11) {
         if (transport.miles <= 150) {
-          if (transport.weather === 1) {
+          if (transport.weather === 1 || transport.weather === 4) {
             return <p className={'transportScore'}>RW FW</p>
           }
-          else if (transport.weather === 2) {
-            return <p className={'transportScore'}>RW FW</p>
+          else if (transport.weather === 2 || transport.weather === 3) {
+            return <p className={'transportScore'}>FW</p>
           }
         }
         else if (transport.miles > 150) {
@@ -79,7 +79,7 @@ class Result extends Component {
       }
   }
   render() {
-
+      console.log('acuity', this.props.acuityScore, this.state.transportScore);
     return (
       <div className={'fullContainer column'}>
         <div className={'baseElement row'}>

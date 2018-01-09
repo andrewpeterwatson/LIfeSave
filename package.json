@@ -7,7 +7,8 @@
     "node": "6.11.0"
   },
   "scripts": {
-    "start": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot",
+    "start-mac": "webpack-dev-server --hot",
+    "start-win": "node ./node_modules/webpack-dev-server/bin/webpack-dev-server.js --hot",
     "prod": "NODE_ENV=production node server.js",
     "postinstall": "node ./node_modules/webpack/bin/webpack.js"
   },
