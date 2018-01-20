@@ -65,6 +65,7 @@ main {
 .twiceBase {
   flex: 2;
   display: flex;
+  align-items: center;
 }
 .thriceBase {
   flex: 3;
@@ -79,6 +80,12 @@ main {
   display: flex;
 }
 
+.formatEighty {
+  width: 80vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 //form
 .acuityElContainer {

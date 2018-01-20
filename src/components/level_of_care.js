@@ -18,7 +18,7 @@ class LOC extends Component {
           <p className='formHeading animated fadeInUp'>Level of Care</p>
         </div>
         <div className={'twiceBase column'}>
-          <div className={'twiceBase'}>
+          <div className={'twiceBase formatEighty'}>
             <p className={'formQustion animated fadeInUp'}>Do they have a time critical illness? e.g., stroke, acute MI, trauma, sepsis</p>
           </div>
           <div className={'baseElement column center'}>
@@ -30,7 +30,7 @@ class LOC extends Component {
           </div>
         </div>
         <div className={'twiceBase column'}>
-          <div className={'twiceBase'}>
+          <div className={'twiceBase formatEighty'}>
             <p className={'formQustion animated fadeInUp'}>What is the care they will need?</p>
           </div>
           <div className={'baseElement column center'}>
@@ -43,8 +43,8 @@ class LOC extends Component {
           </div>
         </div>
         <div className={'twiceBase column'}>
-          <div className={'twiceBase'}>
-            <p className={'formQustion animated fadeInUp'}>In the prior 2 hours, have they had symptoms requiring intervention such as:  hemodynamic instability, arrhythmia, neurologic change, intractable pain, other?</p>
+          <div className={'twiceBase formatEighty'}>
+            <p className={'formQustion animated fadeInUp'}>In the previous 2 hours, have serious symptoms needed treatment such as hemodynamic instability, arrhythmia, intractable pain, or other?</p>
           </div>
           <div className={'baseElement column center'}>
               <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu2" onChange={this.props.locChange3}>

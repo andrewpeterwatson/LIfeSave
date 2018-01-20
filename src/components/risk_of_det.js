@@ -17,8 +17,8 @@ class ROD extends Component {
           <p className='animated fadeInUp'>Risk of Deterioration</p>
         </div>
         <div className={'twiceBase column'}>
-          <div className={'baseElement'}>
-            <p className={'formQustion animated fadeInUp'}>Where are they in their clinical course  (2h or less in the hospital)</p>
+          <div className={'baseElement formatEighty'}>
+            <p className={'formQustion animated fadeInUp'}>Are they early in their clinical course requiring transfer, i.e.,2h or less in the hospital? <br /> Would ground transport put them out of the hospital environment for more than 45 minutes?</p>
           </div>
           <div className={'baseElement column center'}>
               <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu1" onChange={this.props.rodChange1}>
@@ -41,7 +41,7 @@ class ROD extends Component {
           </div>
         </div>
         <div className={'twiceBase column'}>
-          <div className={'baseElement'}>
+          <div className={'baseElement formatEighty'}>
             <p className={'formQustion animated fadeInUp'}>Are they less than 5 or greater than 65 yo; or do they have multiple comorbidities or a high disease burden?</p>
           </div>
           <div className={'baseElement column center'}>

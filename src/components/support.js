@@ -17,8 +17,8 @@ class Support extends Component {
           <p className='formHeading animated fadeInUp'>Support</p>
         </div>
         <div className={'twiceBase column'}>
-          <div className={'baseElement'}>
-            <p className={'formQustion animated fadeInUp'}>Are there vasoactive drips needed to control blood pressure or heart rate? <br /> Or; <br /> Is there need for respiratory or ventilation support, either invasive or noninvasive?</p>
+          <div className={'baseElement formatEighty'}>
+            <p className={'formQustion animated fadeInUp'}>Does their blood pressure or heart rhythm require control, either by drips or pacing? <br />  Are they receiving blood products or have they just completed receiving blood products? <br /> Is respiratory support necessary through invasive or noninvasive means?</p>
           </div>
           <div className={'baseElement column center'}>
               <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu1" onChange={this.props.supportChange}>
