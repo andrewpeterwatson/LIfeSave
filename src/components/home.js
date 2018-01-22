@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
-import logo from '../assets/icons/logo_trans.png'
+import logo from '../assets/icons/white-yellow.png'
 import heliBG from '../assets/images/lt_heli.jpg'
 
 import '../styles/layout.scss'
@@ -27,7 +27,7 @@ class Home extends Component {
         <div
         style={{color: Theme.MAIN_BLUE, zIndex: 2}}
         className={'fiveBase center column'}>
-          <h1 className='title'>LifeSave</h1>
+          <h1 className='title'>LIFESAVE</h1>
           <p className='subTitle'>Interfacility Transport Score</p>
           <Link
           to={'/form'}>

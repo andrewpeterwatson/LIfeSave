@@ -43,6 +43,13 @@ $bgColor: rgba(40, 43, 52, 0.25);
     display: block;
 }
 
+@font-face {
+font-family: 'Bebas Neue';
+font-style: normal;
+font-weight: normal;
+// src: url('../assets/fonts/babes-neue/BebasNeue.woff');
+// src: url('../assets/fonts/babes-neue/BebasNeue-Regular.otf');
+}
 
 h1 {
   padding: 0;
@@ -57,24 +64,38 @@ h2 {
   font-weight: 100;
 }
 p {
-  font-size: 1em;
+  font-size: 1.5em;
   padding: 0;
   margin: 0;
-  font-family: 'Anton', sans-serif;
+  font-family: monospace;
+  font-family: 'Bebas Neue', 'Arial', 'Anton', sans-serif;
   font-weight: 100;
 }
+
+// @media (min-width: 700px) and (orientation: landscape) {
+//  }
+
 .dropShadow {
   box-shadow: 0px 0px 18px 1px rgba(0,0,0,0.5);
 }
 .title {
   font-size: 4em;
   color: white;
+  font-family: 'Times New Roman', serif;
 }
 .subTitle {
   font-size: 1.1em;
   line-height: .2em;
   font-weight: 100;
   color: white
+}
+.sectionHead {
+  flex: 1;
+  width: 100vw;
+  background-color: $MAIN_BLUE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .backBtn {
   width: 60px;
@@ -86,9 +107,11 @@ p {
   border: 1px $MAIN_BLUE solid;
 }
 .formHeading {
-  font-size: 2em;
+  font-size: 3em;
+  color: white;
   font-weight: bold;
 }
+
 //home
 .logo {
   margin: 10px;
@@ -151,6 +174,7 @@ p {
 .acuityDropdown {
   width: 30vw;
   height: 60px;
+  font-size: 1.5em;
 }
 .acuityScore {
   font-size: 6em;
@@ -168,6 +192,26 @@ p {
   align-items: center;
   justify-content: center;
 }
+@media (max-width: 700px) {
+  p {
+    font-size: 1em;
+    padding: 0;
+    margin: 0;
+    font-family: monospace;
+    font-family: 'Bebas Neue', 'Arial', 'Anton', sans-serif;
+    font-weight: 100;
+  }
+  .formHeading {
+    font-size: 1.5em;
+    color: white;
+    font-weight: bold;
+  }
+  .acuityDropdown {
+    width: 30vw;
+    height: 60px;
+    font-size: 1em;
+  }
+ }
 :export {
   MAIN_BLUE: $MAIN_BLUE;
   ACCENT_BLUE: $ACCENT_BLUE;

@@ -13,8 +13,10 @@ class ROD extends Component {
     return (
       <div className={'acuityElContainer center'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
-        <div className={'quarterBase formHeading'}>
-          <p className='animated fadeInUp'>Risk of Deterioration</p>
+        <div className={'quarterBase'}>
+        <div className='sectionHead animated fadeInUp'>
+          <p className='formHeading'>Risk of Deterioration</p>
+        </div>
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement formatEighty'}>
@@ -29,7 +31,7 @@ class ROD extends Component {
           </div>
         </div>
         <div className={'twiceBase column'}>
-          <div className={'baseElement'}>
+          <div className={'baseElement formatEighty'}>
             <p className={'formQustion animated fadeInUp'}>Will they be out of the hospital environment for more than 45  minutes during transport?</p>
           </div>
           <div className={'baseElement column center'}>

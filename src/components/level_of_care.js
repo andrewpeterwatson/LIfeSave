@@ -15,7 +15,9 @@ class LOC extends Component {
       <div className={'acuityElContainer column'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
         <div className={'baseElement'}>
-          <p className='formHeading animated fadeInUp'>Level of Care</p>
+          <div className='sectionHead animated fadeInUp'>
+            <p className='formHeading'>Level of Care</p>
+          </div>
         </div>
         <div className={'twiceBase column'}>
           <div className={'twiceBase formatEighty'}>
