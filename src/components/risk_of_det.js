@@ -20,7 +20,7 @@ class ROD extends Component {
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement formatEighty'}>
-            <p className={'formQustion animated fadeInUp'}>Are they early in their clinical course requiring transfer, i.e.,2h or less in the hospital? <br /> Would ground transport put them out of the hospital environment for more than 45 minutes?</p>
+            <p className={'formQustion animated fadeInUp'}>Are they early in their clinical course requiring transfer, i.e.,2h or less in the hospital?</p>
           </div>
           <div className={'baseElement column center'}>
               <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu1" onChange={this.props.rodChange1}>
@@ -32,7 +32,7 @@ class ROD extends Component {
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement formatEighty'}>
-            <p className={'formQustion animated fadeInUp'}>Will they be out of the hospital environment for more than 45  minutes during transport?</p>
+            <p className={'formQustion animated fadeInUp'}>Would ground transport put them out of the hospital environment for more than 45 minutes?</p>
           </div>
           <div className={'baseElement column center'}>
               <select className={'acuityDropdown'} name="acuityMenu1" onChange={this.props.rodChange2}>
