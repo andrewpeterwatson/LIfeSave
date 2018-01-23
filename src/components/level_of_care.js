@@ -13,7 +13,7 @@ class LOC extends Component {
   render() {
     return (
       <div className={'acuityElContainer column'}>
-      <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
+      <form name="acuity1" style={{display: 'flex', flex: 1}} className={'column center'}>
         <div className={'baseElement'}>
           <div className='sectionHead animated fadeInUp'>
             <p className='formHeading'>Level of Care</p>
