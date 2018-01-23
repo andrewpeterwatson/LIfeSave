@@ -119,7 +119,7 @@ p {
 }
 .logoSm {
   margin: 10px;
-  width: 5em;
+  width: 10em;
 }
 .fs_dim {
   margin: 0;
@@ -184,7 +184,8 @@ p {
   height: 40px;
 }
 .transportScore {
-  font-size: 4em;
+  font-size: 6em;
+  font-weight: bold;
 }
 .btnContainer {
   width: 100vw;
@@ -192,6 +193,10 @@ p {
   align-items: center;
   justify-content: center;
 }
+.transportName {
+  font-size: 3em;
+}
+
 @media (max-width: 700px) {
   p {
     font-size: 1em;
@@ -210,6 +215,17 @@ p {
     width: 30vw;
     height: 60px;
     font-size: 1em;
+  }
+  .logoSm {
+    margin: 10px;
+    width: 6em;
+  }
+  .transportName {
+    font-size: 1.3em;
+  }
+  .transportScore {
+    font-size: 4em;
+    font-weight: bold;
   }
  }
 :export {

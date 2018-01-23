@@ -101,8 +101,10 @@ class Result extends Component {
           </Link>
           </div>
         </div>
-        <div className={'halfBase center'}>
-          <h2>Transport Plan</h2>
+        <div className={'twiceBase'}>
+          <div className='sectionHead animated fadeInUp'>
+            <p className='formHeading'>Transport Plan</p>
+          </div>
         </div>
         <div className={'fiveBase column'}>
           <div className={'baseElement column center'}>

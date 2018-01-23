@@ -13,9 +13,11 @@ class FlightConditions extends Component {
     return (
       <div className={'baseElement'}>
       <form name="acuity1" style={{display: 'flex'}} className={'column center'}>
-        <div className={'baseElement'}>
-          <p className='formHeading animated fadeInUp'>Flight Conditions</p>
+      <div className={'baseElement'}>
+        <div className='sectionHead animated fadeInUp'>
+          <p className='formHeading'>Flight Conditions</p>
         </div>
+      </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement'}>
             <p className={'formQustion animated fadeInUp'}>Distance</p>
