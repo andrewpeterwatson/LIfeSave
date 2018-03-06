@@ -18,7 +18,7 @@ class FlightConditions extends Component {
           <p className='formHeading'>Flight Conditions</p>
         </div>
       </div>
-        <div className={'twiceBase column'}>
+        <div className={'twiceBase column distanceConatainer'}>
           <div className={'baseElement'}>
             <p className={'formQustion animated fadeInUp'}>Distance</p>
           </div>
