@@ -117,13 +117,13 @@ class Form extends Component {
   renderSpecialization = () => {
     let acuity = this.props.acuityScore
     if (acuity <= 3) {
-        return <p>BLS</p>
+        return <p className='specDescText'>BLS</p>
       }
     else if (acuity >= 4 && acuity <= 10) {
-      return <p>ALS</p>
+      return <p className='specDescText'>ALS</p>
       }
     else if (acuity >= 11) {
-      return <p>Critical Care</p>
+      return <p className='specDescText'>Critical Care</p>
       }
   }
 
@@ -175,10 +175,11 @@ class Form extends Component {
             </div>
           </div> : <div>
             <div className={'flightConditionsContainer column center'}>
-            <div style={{textAlign: 'center'}}>
+            <div style={{textAlign: 'center'}} className='innerFlightConditions'>
             <h2 className={'transportScore'}>{this.state.acuityScore}</h2>
+            <p className='animated fadeInUp acuityScoreText'>Acuity Score</p>
+            <p className='animated fadeInUp specializationText'>Specialization</p>
               {this.renderSpecialization()}
-            <p className='animated fadeInUp'>Acuity Score</p>
             </div>
             <div>
             <FlightConditions
