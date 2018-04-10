@@ -45,7 +45,16 @@ class LOC extends Component {
           </div>
         </div>
         <div className={'twiceBase column'}>
-          
+          <div className={'twiceBase formatEighty'}>
+            <p className={'formQustion animated fadeInUp'}>In the previous 2 hours, have serious symptoms needed treatment such as hemodynamic instability, arrhythmia, or other?</p>
+          </div>
+          <div className={'baseElement column center'}>
+              <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu2" onChange={this.props.locChange3}>
+                <option>Answer</option>
+                <option value={4}>YES</option>
+                <option value={0}>NO</option>
+              </select>
+          </div>
         </div>
         </form>
       </div>

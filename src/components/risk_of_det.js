@@ -44,7 +44,7 @@ class ROD extends Component {
         </div>
         <div className={'twiceBase column'}>
           <div className={'baseElement formatEighty'}>
-            <p className={'formQustion animated fadeInUp'}>Are they less than 5 or greater than 65 yo; <br /> or  <br />do they have multiple comorbidities or a high disease burden?</p>
+            <p className={'formQustion animated fadeInUp'}>Are they less than 5 or greater than 65 yoa; <br /> or  <br />do they have multiple comorbidities or a high disease burden?</p>
           </div>
           <div className={'baseElement column center'}>
               <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu1" onChange={this.props.rodChange3}>
