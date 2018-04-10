@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
 import { updateAcuity } from '../actions/index'
 import { bindActionCreators } from 'redux'
-import logo from '../assets/icons/lifeteam_logo.png'
+import logo from '../assets/icons/logo.png'
 
 import '../styles/layout.scss'
 import Theme from '../styles/theme.scss'
@@ -19,7 +19,6 @@ class Result extends Component {
   scoreTransport = () => {
     let acuity = this.props.acuityScore
     let transport = this.props.flightConditions
-    console.log('ACUITY and transport', acuity, transport);
     if (transport.weather === 0) {
       return <p className={'transportScore'}>GROUND</p>
     }
@@ -97,7 +96,7 @@ class Result extends Component {
           to={'/'}>
           <img
           style={{objectFit: 'contain'}}
-          className={'logoSm'} src={ logo } alt={'LifeTeam'} />
+          className={'logoSmResult'} src={ logo } alt={'LifeTeam'} />
           </Link>
           </div>
         </div>

@@ -1,5 +1,5 @@
-$MAIN_BLUE: #0B3C81;
-$TITLE: #0B3C81;
+$MAIN_BLUE: #355ddc;
+$TITLE: #355ddc;
 $SUBTITLE: #7da1d5;
 $MAIN_YELLOW: #FAE600;
 $ACCENT_BLUE: #00CAF7;
@@ -84,10 +84,10 @@ p {
   font-family: 'Times New Roman', serif;
 }
 .subTitle {
-  font-size: 1.1em;
+  font-size: 1.3em;
   line-height: .2em;
   font-weight: 100;
-  color: white
+  color: #edb52a
 }
 .sectionHead {
   flex: 1;
@@ -116,11 +116,16 @@ p {
 //home
 .logo {
   margin: 10px;
-  width: 10em;
+  width: 20em;
 }
 .logoSm {
   margin: 10px;
   width: 10em;
+}
+.logoSmResult {
+  margin: 10px;
+  width: 10em;
+  margin-top: 85px;
 }
 .fs_dim {
   margin: 0;
@@ -130,7 +135,7 @@ p {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: rgba(0,0,0,0.25);
+  background-color: rgba(0,0,0,0.75);
 }
 .bgImageContainer {
   margin: 0;
@@ -143,12 +148,27 @@ p {
   overflow: hidden;
 }
 .homeBGImage {
-  margin: 0;
-  padding: 0;
-  min-width: 100vw;
+  display: block;
+  width: auto;
+  height: auto;
   min-height: 100vh;
-  background-size: contain;
+  min-width: 100vw;
+  margin-left: -20em;
+  background-size: cover;
 }
+
+
+@media (min-width: 1250px) {
+  .homeBGImage {
+    display: block;
+    width: auto;
+    height: auto;
+    min-height: 100vh;
+    margin-left: 0;
+    background-size: cover;
+  }
+ }
+
 .startBtn {
   margin: 30px;
   width: 150px;

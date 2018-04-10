@@ -5,7 +5,7 @@ import { updateAcuity } from '../actions/index'
 import { updateFC } from '../actions/action_update_flight_conditions'
 import { bindActionCreators } from 'redux'
 
-import logo from '../assets/icons/lifeteam_logo.png'
+import logo from '../assets/icons/logo.png'
 
 import LOC from '../components/level_of_care'
 import ROD from '../components/risk_of_det'
@@ -26,6 +26,7 @@ class Form extends Component {
     this.weatherChange = this.weatherChange.bind(this)
     this.weightChange = this.weightChange.bind(this)
     this.supportChange = this.supportChange.bind(this)
+    this.supportChange2 = this.supportChange2.bind(this)
     this.toggleShowAcuityScore = this.toggleShowAcuityScore.bind(this)
     this.state = {
       showAcuity: false,
@@ -35,7 +36,10 @@ class Form extends Component {
         2: null,
         3: null
       },
-      supportAcuity: null,
+      supportAcuity: {
+        1: null,
+        2: null
+      },
       rodAcuity: {
         1: null,
         2: null,
@@ -66,7 +70,12 @@ class Form extends Component {
   }
   supportChange = (e) => {
     let supportAcuity = this.state.supportAcuity
-    supportAcuity = parseInt(e.target.value)
+    supportAcuity[1] = parseInt(e.target.value)
+    this.setState({ supportAcuity })
+  }
+  supportChange2 = (e) => {
+    let supportAcuity = this.state.supportAcuity
+    supportAcuity[2] = parseInt(e.target.value)
     this.setState({ supportAcuity })
   }
   rodChange1 = (e) => {
@@ -94,7 +103,7 @@ class Form extends Component {
     let loc = this.state.locAcuity
     let support = this.state.supportAcuity
     let rod = this.state.rodAcuity
-    let acuityScore = loc[1] + loc[2] + loc[3] + support + rod[1] + rod[2] + rod[3]
+    let acuityScore = loc[1] + loc[2] + loc[3] + support[1] + support[2] + rod[1] + rod[2] + rod[3]
     this.setAcuity(acuityScore)
     this.toggleShowAcuityScore()
     this.props.updateAcuity(acuityScore)
@@ -161,7 +170,9 @@ class Form extends Component {
             locChange3={this.locChange3}
             />
             <Support
-            supportChange={this.supportChange} />
+            supportChange={this.supportChange}
+            supportChange2={this.supportChange2}
+             />
             <ROD
             rodChange1={this.rodChange1}
             rodChange2={this.rodChange2}

@@ -42,13 +42,17 @@ class FlightConditions extends Component {
               </select>
           </div>
         </div>
-        <div className={'twiceBase column'}>
+        <div className={'thriceBase column'} style={{marginTop: 10}}>
           <div className={'baseElement'}>
             <p className={'formQustion animated fadeInUp'}>Patient Weight</p>
           </div>
           <div className={'baseElement row center'}>
           <input onChange={this.props.weightChange} className={'transportInput animated fadeInUp'} type='number' />
           <p>lbs</p>
+          </div>
+          <div className={'baseElement row center'} style={{marginTop: 20}} >
+          <p>Will you need a consult?</p>
+          <input className={'animated fadeInUp'} type='checkbox' />
           </div>
         </div>
         </form>

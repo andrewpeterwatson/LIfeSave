@@ -29,6 +29,16 @@ class Support extends Component {
                 <option value={0}>NO</option>
               </select>
           </div>
+          <div className={'twiceBase formatEighty'}>
+            <p className={'formQustion animated fadeInUp'}>In the previous 2 hours, have serious symptoms needed treatment such as hemodynamic instability, arrhythmia, intractable pain, or other?</p>
+          </div>
+          <div className={'baseElement column center'}>
+              <select className={'acuityDropdown animated fadeInUp'} name="acuityMenu2" onChange={this.props.supportChange2}>
+                <option>Answer</option>
+                <option value={2}>YES</option>
+                <option value={0}>NO</option>
+              </select>
+          </div>
         </div>
         </form>
       </div>
