@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
 
 import logo     from '../assets/icons/logoOnly.png'
-import heliBG   from '../assets/images/heli.png'
 import PlaneImg from '../assets/images/plane_01.jpg'
 
 import '../styles/layout.scss'

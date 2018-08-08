@@ -28,10 +28,10 @@ class Result extends Component {
     else if (transport.weather === 4 && acuity < 11) {
       return <p className={'transportScore'}>RW FW</p>
     }
-    else if (acuity <= 3) {
+    else if (acuity <= 7) {
       return <p className={'transportScore'}>GROUND</p>
     }
-    else if (acuity >= 4 && acuity <= 10) {
+    else if (acuity >= 8 && acuity <= 10) {
       if (transport.miles <= 50) {
         return <p className={'transportScore'}>GROUND</p>
         }
@@ -48,7 +48,13 @@ class Result extends Component {
       }
       }
       else if (acuity >= 11) {
-        if (transport.miles <= 150) {
+        if (transport.miles <= 50
+            && transport.weather != 3
+            && transport.weather != 4) {
+              return <p className={'transportScore'}>GROUND</p>  
+        }
+        else if (transport.miles <= 150) {
+
           if (transport.weather === 1 || transport.weather === 4) {
             return <p className={'transportScore'}>RW FW</p>
           }
